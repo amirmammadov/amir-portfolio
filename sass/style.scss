@@ -1,0 +1,57 @@
+@import "@/sass/utils/_variables.scss";
+@import "@/sass/utils/_colors.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: $white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+section,
+nav {
+  padding: 0 5%;
+}
+
+body {
+  font-size: 100%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: $breakpoint-lg) {
+  body {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  body {
+    font-size: 85%;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  body {
+    font-size: 70%;
+  }
+  section,
+  nav {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}

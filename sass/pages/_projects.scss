@@ -1,0 +1,12 @@
+@import "@/sass/utils/_colors.scss";
+@import "@/sass/utils/_mixins.scss";
+@import "@/sass/utils/_variables.scss";
+@import "@/sass/utils/_mixins.scss";
+
+.projects {
+  padding-top: 8em;
+  padding-bottom: 3em;
+  background-color: $dark;
+  width: 100vw;
+  height: auto;
+}

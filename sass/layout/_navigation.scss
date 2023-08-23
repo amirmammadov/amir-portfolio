@@ -1,0 +1,153 @@
+@import "@/sass/utils/_colors.scss";
+@import "@/sass/utils/_mixins.scss";
+@import "@/sass/utils/_variables.scss";
+
+.nav {
+  @include flexbox($justify: space-between, $items: center);
+  background-color: $dark;
+  height: 5em;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: $box-shadow;
+
+  &__logo {
+    text-transform: lowercase;
+    font-size: 2.2em;
+
+    &__link {
+      text-decoration: none;
+      display: block;
+      color: $white;
+      @include flexbox($justify: center, $items: center);
+    }
+  }
+
+  &__list {
+    @include flexbox($justify: space-between, $items: center, $gap: 1em);
+    height: 100%;
+  }
+
+  &__list--responsive {
+    display: none;
+  }
+
+  &__item {
+    font-size: 1.1em;
+    letter-spacing: 0.01em;
+    padding: 0.5em;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .dropdown {
+    position: relative;
+
+    &__content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: $dark2;
+      width: 8em;
+      padding: 0.5em;
+      border-radius: 0.5em;
+    }
+
+    &:hover .dropdown__content {
+      @include flexbox(
+        $justify: baseline,
+        $items: center,
+        $direction: column,
+        $gap: 0.5em
+      );
+    }
+
+    &:hover .dropdown__btn {
+      color: $blue;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+
+      .nav__menu__line {
+        background-color: $blue;
+      }
+    }
+
+    &__line {
+      display: block;
+      width: 2.2em;
+      height: 0.11em;
+      background-color: $white;
+      margin: 0.3em;
+    }
+  }
+
+  &__menu.clicked {
+    .nav__menu__line:nth-child(1) {
+      transform: translateY(0.38em) rotate(45deg);
+      transition: linear 0.2s;
+    }
+
+    .nav__menu__line:nth-child(2) {
+      display: none;
+    }
+
+    .nav__menu__line:nth-child(3) {
+      transform: translateY(-0.38em) rotate(-45deg);
+      transition: linear 0.2s;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .nav__list {
+    display: none;
+  }
+
+  .nav__list--responsive.active {
+    @include flexbox(
+      $justify: space-between,
+      $items: center,
+      $direction: column,
+      $gap: 0.5em
+    );
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: $dark;
+    padding: 1em 0;
+  }
+
+  .nav__menu {
+    @include flexbox(
+      $justify: space-between,
+      $items: center,
+      $direction: column
+    );
+  }
+}

@@ -1,0 +1,32 @@
+@import "@/sass/utils/_colors.scss";
+@import "@/sass/utils/_mixins.scss";
+@import "@/sass/utils/_variables.scss";
+@import "@/sass/utils/_mixins.scss";
+
+.skills {
+  width: 100vw;
+  height: auto;
+  background-color: $dark;
+
+  &__content {
+    padding: 5em 0;
+
+    &___item__img {
+      @include flexbox($justify: center, $items: center);
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .skills__content__item {
+    width: 100%;
+    @include flexbox($justify: center, $items: center);
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xs) {
+  .skills__content__item {
+    width: 100%;
+    @include flexbox($justify: center, $items: center);
+  }
+}

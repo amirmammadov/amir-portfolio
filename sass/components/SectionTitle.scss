@@ -1,0 +1,15 @@
+@import "@/sass/utils/_colors.scss";
+@import "@/sass/utils/_mixins.scss";
+
+.section__title {
+  height: auto;
+  @include flexbox($justify: center, $items: center);
+
+  &__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    border-bottom: 0.2rem solid $blue;
+    color: $white;
+  }
+}

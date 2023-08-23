@@ -1,0 +1,127 @@
+@import "@/sass/utils/_colors.scss";
+@import "@/sass/utils/_mixins.scss";
+@import "@/sass/utils/_variables.scss";
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background-color: $dark;
+  @include flexbox($justify: space-between, $items: center);
+  padding-top: 5em;
+  margin: auto 0;
+
+  &__text {
+    @include flexbox(
+      $direction: column,
+      $items: flex-start,
+      $justify: space-between,
+      $gap: 1em
+    );
+    width: 50%;
+    height: auto;
+
+    &__name {
+      color: $white;
+      text-transform: capitalize;
+      font-size: 4em;
+    }
+
+    &__job {
+      color: $blue;
+      text-transform: capitalize;
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+
+    &__desc {
+      color: $white;
+      text-transform: capitalize;
+      font-size: 1em;
+      opacity: 0.8;
+    }
+
+    &__contact {
+      margin: 2em 0;
+
+      &__btn {
+        text-decoration: none;
+        background-color: $blue;
+        border-radius: 1em;
+        padding: 0.5em 1.5em;
+        color: $white;
+        font-size: 1.1em;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &__social {
+      @include flexbox($justify: flex-start, $items: center, $gap: 1em);
+
+      &__btn {
+        text-decoration: none;
+        color: $white;
+        opacity: 0.9;
+        @include flexbox($justify: center, $items: center, $gap: 0.2em);
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  &__image {
+    @include flexbox($justify: center, $items: center);
+    width: 48%;
+    height: 25em;
+    background: url("../../public/assets/me.jpg") center center no-repeat;
+    background-size: cover;
+    border-radius: 1em;
+    box-shadow: $box-shadow;
+
+    &__cover {
+      width: 100%;
+      height: 100%;
+      border-radius: 1em;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: relative;
+
+      &__js {
+        position: absolute;
+        top: -2%;
+        right: -2%;
+        background-color: $blue;
+        color: $white;
+        padding: 1em;
+        border-radius: 1em;
+        font-size: 1.1em;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .hero {
+    flex-direction: column;
+    height: 60em;
+    padding-top: 8em;
+    padding-bottom: 5em;
+    gap: 1.5em;
+
+    &__text {
+      width: 100%;
+    }
+
+    &__image {
+      width: 100%;
+    }
+  }
+}
