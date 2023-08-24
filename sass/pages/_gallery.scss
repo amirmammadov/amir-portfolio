@@ -12,44 +12,40 @@
   @include flexbox($justify: center, $items: center, $direction: column);
 
   &__container {
-    display: flex;
-    flex-wrap: wrap;
     padding-top: 6em;
     padding-bottom: 3em;
+    @include flexbox($justify: center, $items: center, $gap: 3em);
+    flex-wrap: wrap;
 
-    &__column {
-      flex: 25%;
-      max-width: 25%;
-      height: 100%;
-      padding: 0 0.3em;
+    &__item {
+      min-width: 300px;
+      margin-top: 0.5em;
+      border-radius: 0.8em;
+      opacity: 0.7;
+      transition: all 0.3s ease;
 
-      &__img {
-        width: 100%;
-        margin-top: 0.5em;
-        border-radius: 0.8em;
-        opacity: 0.7;
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
         transition: all 0.3s ease;
-
-        &:hover {
-          cursor: pointer;
-          opacity: 1;
-          transition: all 0.3s ease;
-        }
       }
     }
   }
 }
 
-@media only screen and (max-width: $breakpoint-lg) {
-  .gallery__container__column {
-    flex: 50%;
-    max-width: 50%;
+@media only screen and (max-width: $breakpoint-xl) {
+  .gallery__container {
+    gap: 1em;
   }
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
-  .gallery__container__column {
-    flex: 100%;
-    max-width: 100%;
+  .gallery__container__item {
+    width: 90%;
+    margin: 0 auto;
+    background-size: contain;
+  }
+  .gallery__container {
+    gap: 2em;
   }
 }
