@@ -9,4 +9,143 @@
   background-color: $dark;
   width: 100vw;
   height: auto;
+
+  &__container {
+    padding: 3em 0;
+    width: 100%;
+    height: auto;
+    @include flexbox(
+      $justify: center,
+      $items: center,
+      $direction: column,
+      $gap: 3em
+    );
+
+    &__btns {
+      @include flexbox($justify: center, $items: center, $gap: 1.5em);
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
+
+      &__btn {
+        background-color: $blue;
+        color: $white;
+        padding: 0.5em 1em;
+        border-radius: 0.5em;
+        border: none;
+        outline: none;
+        font-size: 1.1em;
+        box-shadow: $box-shadow;
+        border: 0.1em solid $blue;
+        transition: all 0.3s linear;
+        text-transform: capitalize;
+
+        &:hover {
+          background-color: transparent;
+          color: $blue;
+          cursor: pointer;
+          transition: all 0.1s linear;
+        }
+
+        &:focus {
+          transform: scale(0.9);
+          transition: all 0.1s linear;
+        }
+      }
+    }
+
+    &__items {
+      @include flexbox($justify: center, $items: center, $gap: 3em);
+      width: 100%;
+      height: auto;
+      flex-wrap: wrap;
+
+      &__item {
+        box-shadow: $box-shadow;
+        transition: all 0.2s linear;
+        max-width: 300px;
+
+        &:hover {
+          transform: scale(0.95);
+          transition: all 0.2s linear;
+          cursor: pointer;
+        }
+
+        &__img {
+          border-top-left-radius: 0.5em;
+          border-top-right-radius: 0.5em;
+        }
+
+        &__info {
+          width: 100%;
+          padding: 1.5em;
+          background-color: $white;
+          @include flexbox(
+            $direction: column,
+            $justify: center,
+            $items: center,
+            $gap: 1em
+          );
+          border-bottom-left-radius: 0.5em;
+          border-bottom-right-radius: 0.5em;
+          word-wrap: break-word;
+
+          &__name {
+            color: $blue;
+            font-size: 1.5em;
+          }
+
+          &__techs {
+            font-size: 1em;
+          }
+
+          &__btn {
+            text-decoration: none;
+            background-color: $blue;
+            color: $white;
+            border: 0.1em solid $blue;
+            padding: 0.5em 1em;
+            font-size: 1em;
+            border-radius: 0.5em;
+            transition: all 0.2s linear;
+
+            &:hover {
+              background-color: $white;
+              color: $blue;
+              transition: all 0.2s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-xl) {
+  .projects__container__items {
+    gap: 1em;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .projects__container__items {
+    gap: 1em;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .projects__container__btns {
+    gap: 0.5em;
+  }
+  .projects__container__items {
+    gap: 2em;
+  }
+  .projects__container__items__item {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .projects__container__items__item__img {
+    width: 100%;
+    background-size: contain;
+  }
 }
