@@ -5,15 +5,13 @@
 
 .gallery {
   padding-top: 8em;
-  padding-bottom: 3em;
   background-color: $dark;
   width: 100vw;
   height: auto;
   @include flexbox($justify: center, $items: center, $direction: column);
 
   &__container {
-    padding-top: 6em;
-    padding-bottom: 3em;
+    padding: 3em 0;
     @include flexbox($justify: center, $items: center, $gap: 3em);
     flex-wrap: wrap;
 

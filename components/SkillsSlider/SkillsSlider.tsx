@@ -8,6 +8,8 @@ import Image from "next/image";
 import "swiper/scss";
 import "swiper/scss/autoplay";
 
+import { skills } from "@/data/skillsData";
+
 import "@/sass/layout/_skills.scss";
 
 const sliderImgSize = 140;
@@ -48,105 +50,19 @@ const SkillsSlider = () => {
         },
       }}
     >
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/js.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/react.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/node2.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/next.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/mui.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/css4.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/html.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/ts.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/redux.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/mongodb.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
-      <SwiperSlide className="skills__content__item">
-        <Image
-          src="/assets/skill/git.png"
-          alt="skills"
-          width={sliderImgSize}
-          height={sliderImgSize}
-          className="skills__content__item__img"
-        />
-      </SwiperSlide>
+      {skills.map((skill) => {
+        return (
+          <SwiperSlide key={skill.id} className="skills__content__item">
+            <Image
+              src={`/assets/${skill.image}`}
+              alt="skills"
+              width={sliderImgSize}
+              height={sliderImgSize}
+              className="skills__content__item__img"
+            />
+          </SwiperSlide>
+        );
+      })}
     </Swiper>
   );
 };
