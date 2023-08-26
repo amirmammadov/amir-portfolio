@@ -63,7 +63,7 @@
         border-radius: 0.5em;
         padding: 2em;
         @include flexbox(
-          $justify: flex-start,
+          $justify: center,
           $items: center,
           $direction: column,
           $gap: 1em
@@ -134,10 +134,6 @@
 
       &__info {
         width: 100%;
-      }
-
-      &__overflow {
-        justify-content: center;
       }
     }
   }

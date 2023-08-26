@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+
+import { motion } from "framer-motion";
 
 const gameImageWidth = 300;
 const gameImageHeight = 250;
@@ -11,16 +15,40 @@ interface IGames {
   image: string;
 }
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.5,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: -50 },
+  show: { opacity: 1, y: 0 },
+};
+
 const GameItem = ({ games }: { games: IGames[] }) => {
   return (
-    <div className="games__container__list">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className="games__container__list"
+    >
       {games.map((game) => {
         return (
-          <div key={game.id} className="games__container__list__item">
+          <motion.div
+            variants={item}
+            key={game.id}
+            className="games__container__list__item"
+          >
             <Image
               src={`/assets/${game.image}`}
               alt="game"
-              //   layout="responsive"
               objectFit="cover"
               objectPosition="center"
               width={gameImageWidth}
@@ -36,10 +64,10 @@ const GameItem = ({ games }: { games: IGames[] }) => {
                 {game.name}
               </h2>
             </Link>
-          </div>
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 

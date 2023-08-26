@@ -50,7 +50,7 @@ const SkillsSlider = () => {
     >
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/js.png"
+          src="/assets/skill/js.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -59,7 +59,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/react.png"
+          src="/assets/skill/react.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -68,7 +68,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/node2.png"
+          src="/assets/skill/node2.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -77,7 +77,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/next.png"
+          src="/assets/skill/next.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -86,7 +86,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/mui.png"
+          src="/assets/skill/mui.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -95,7 +95,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/css4.png"
+          src="/assets/skill/css4.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -104,7 +104,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/html.png"
+          src="/assets/skill/html.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -113,7 +113,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/ts.png"
+          src="/assets/skill/ts.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -122,7 +122,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/redux.png"
+          src="/assets/skill/redux.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -131,7 +131,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/mongodb.png"
+          src="/assets/skill/mongodb.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}
@@ -140,7 +140,7 @@ const SkillsSlider = () => {
       </SwiperSlide>
       <SwiperSlide className="skills__content__item">
         <Image
-          src="/assets/git.png"
+          src="/assets/skill/git.png"
           alt="skills"
           width={sliderImgSize}
           height={sliderImgSize}

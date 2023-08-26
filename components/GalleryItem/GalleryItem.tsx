@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Image from "next/image";
 
 const imageStyle = {
@@ -10,23 +14,54 @@ interface IGalleries {
   image: string;
 }
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      delayChildren: 0.7,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const images = {
+  hidden: {
+    opacity: 0,
+    x: 60,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
 const GalleryItem = ({ galleries }: { galleries: IGalleries[] }) => {
   return (
-    <div className="gallery__container">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className="gallery__container"
+    >
       {galleries.map((gallery) => {
         return (
-          <Image
-            key={gallery.id}
-            src={`/assets/${gallery.image}`}
-            alt="gallery"
-            width={300}
-            height={350}
-            className="gallery__container__item"
-            style={imageStyle}
-          />
+          <motion.div key={gallery.id} variants={images}>
+            <Image
+              src={`/assets/${gallery.image}`}
+              alt="gallery"
+              width={300}
+              height={350}
+              className="gallery__container__item"
+              style={imageStyle}
+            />
+          </motion.div>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
