@@ -32,7 +32,7 @@ const Navbar = () => {
             <div className="nav__item">
               <Link href="/gallery" className="nav__link">
                 <Image
-                  src="/assets/gallery.png"
+                  src="/assets/icon/gallery.png"
                   alt="gallery"
                   width={20}
                   height={20}
@@ -43,7 +43,7 @@ const Navbar = () => {
             <div className="nav__item">
               <Link href="/games" className="nav__link">
                 <Image
-                  src="/assets/game.png"
+                  src="/assets/icon/game.png"
                   alt="game"
                   width={20}
                   height={20}

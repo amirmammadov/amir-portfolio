@@ -86,7 +86,7 @@ const Contact = () => {
         <div className="contact__container__info">
           <div className="contact__container__info__item">
             <Image
-              src="/assets/location-icon3.png"
+              src="/assets/icon/location-icon3.png"
               alt="location"
               width={30}
               height={40}
@@ -98,7 +98,7 @@ const Contact = () => {
           </div>
           <div className="contact__container__info__item">
             <Image
-              src="/assets/phone-icon.png"
+              src="/assets/icon/phone-icon.png"
               alt="phone"
               width={30}
               height={40}
@@ -110,7 +110,7 @@ const Contact = () => {
           </div>
           <div className="contact__container__info__item">
             <Image
-              src="/assets/mail-icon.jpg"
+              src="/assets/icon/mail-icon.jpg"
               alt="mail"
               width={30}
               height={40}

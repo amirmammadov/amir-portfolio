@@ -59,6 +59,7 @@
 
     &__social {
       @include flexbox($justify: flex-start, $items: center, $gap: 1em);
+      text-transform: capitalize;
 
       &__btn {
         text-decoration: none;
@@ -75,9 +76,9 @@
 
   &__image {
     @include flexbox($justify: center, $items: center);
-    width: 48%;
-    height: 25em;
-    background: url("../../public/assets/me.jpg") center center no-repeat;
+    width: 45%;
+    height: 30em;
+    background: url("../../public/assets/me2.jpg") center center no-repeat;
     background-size: cover;
     border-radius: 1em;
     box-shadow: $box-shadow;
@@ -86,7 +87,7 @@
       width: 100%;
       height: 100%;
       border-radius: 1em;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
       position: relative;
 
       &__js {

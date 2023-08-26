@@ -122,6 +122,7 @@
 @media only screen and (max-width: $breakpoint-md) {
   .popular__projects__content {
     flex-direction: column;
+    gap: 2em;
 
     &__item {
       width: 100%;
@@ -133,6 +134,10 @@
 
       &__info {
         width: 100%;
+      }
+
+      &__overflow {
+        justify-content: center;
       }
     }
   }
