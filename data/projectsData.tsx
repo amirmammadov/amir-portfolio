@@ -55,11 +55,11 @@ export const projects = [
   },
   {
     id: 7,
-    name: "Node Farm",
-    link: "https://node-farm-nine.vercel.app",
-    image: "project/proj-farm.png",
-    techs: "NodeJs",
-    category: "nodeJs",
+    name: "Social Media",
+    link: "https://social-media-client-amirmammadov.vercel.app/",
+    image: "project/proj-social.png",
+    techs: "React,NodeJs,ExpressJs and MongoDB",
+    category: "mern",
     popular: false,
   },
   {
