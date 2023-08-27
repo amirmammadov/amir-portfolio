@@ -43,6 +43,7 @@ const ProjectItems = ({ projects }: { projects: IProject[] }) => {
           <motion.div
             variants={item}
             className="projects__container__items__item"
+            whileHover={{ scale: 0.95 }}
             key={project.id}
           >
             <Image

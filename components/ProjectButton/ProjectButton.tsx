@@ -35,6 +35,7 @@ const ProjectButtons = ({ categories, filterProjects }: IProjectButtons) => {
         return (
           <motion.button
             variants={item}
+            whileFocus={{ scale: 0.9 }}
             key={index}
             onClick={() => filterProjects(category)}
             className="projects__container__btns__btn"

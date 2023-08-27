@@ -44,6 +44,7 @@ const GameItem = ({ games }: { games: IGames[] }) => {
           <motion.div
             variants={item}
             key={game.id}
+            whileHover={{ scale: 0.9 }}
             className="games__container__list__item"
           >
             <Image
