@@ -23,7 +23,7 @@ export const projects = [
     link: "https://mern-quiz-app-amirmammadov.vercel.app",
     image: "project/proj-quiz.png",
     techs: "React,NodeJs,ExpressJs and MongoDB",
-    category: "mern",
+    category: "fullstack",
     popular: true,
   },
   {
@@ -33,7 +33,7 @@ export const projects = [
     image: "project/proj-mexant.png",
     techs: "HTML,CSS and JS",
     category: "basic",
-    popular: true,
+    popular: false,
   },
   {
     id: 5,
@@ -56,11 +56,11 @@ export const projects = [
   {
     id: 7,
     name: "Social Media",
-    link: "https://social-media-client-amirmammadov.vercel.app/",
-    image: "project/proj-social.png",
-    techs: "React,NodeJs,ExpressJs and MongoDB",
-    category: "mern",
-    popular: false,
+    link: "https://threads-amirmammadov.vercel.app",
+    image: "project/threads-full.png",
+    techs: "NextJS, TypeScript, MongoDB, Clerk",
+    category: "fullstack",
+    popular: true,
   },
   {
     id: 8,

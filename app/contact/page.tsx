@@ -7,6 +7,8 @@ import { sendContactForm } from "@/lib/api";
 import "@/sass/pages/_contact.scss";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 
+import { locationOfCity } from "@/constant/location";
+
 import Image from "next/image";
 
 export interface StateValues {
@@ -80,7 +82,11 @@ const Contact = () => {
     <section className="contact">
       <SectionTitle text="Contact Me" />
       <div className="contact__img">
-        <div className="contact__img__overlay"></div>
+        <iframe
+          src={locationOfCity}
+          loading="lazy"
+          className="contact__img__iframe"
+        ></iframe>
       </div>
       <div className="contact__container">
         <div className="contact__container__info">
