@@ -44,7 +44,7 @@ export const gamesData = [
   {
     id: 8,
     name: "Space Invaders Game",
-    url: "https://mammadov-spave-invaders-game.netlify.app",
+    url: "https://mammadov-space-invaders-game.netlify.app",
     image: "game/games9.png",
   },
   {
