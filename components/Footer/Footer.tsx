@@ -14,6 +14,8 @@ interface ISocial {
 }
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <section className="footer">
       <div className="footer__content">
@@ -32,7 +34,7 @@ const Footer = () => {
           })}
         </div>
         <div className="footer__content__text">
-          Copyright © 2023 Mammadov Amir | All Rights Reserved
+          Copyright © {currentYear} Mammadov Amir | All Rights Reserved
         </div>
       </div>
     </section>
