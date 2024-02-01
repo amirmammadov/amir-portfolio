@@ -64,11 +64,11 @@ export const projects = [
   },
   {
     id: 8,
-    name: "Calculator",
-    link: "https://calculator-app-git-main-amirmammadov.vercel.app/",
-    image: "project/proj-calculator.png",
-    techs: "React,TypeScript",
-    category: "react",
+    name: "Dall-E",
+    link: "https://dall-e-amirmammadov.vercel.app",
+    image: "project/proj-dalle.png",
+    techs: "React,Tailwind,Mongoose",
+    category: "fullstack",
     popular: false,
   },
 ];
