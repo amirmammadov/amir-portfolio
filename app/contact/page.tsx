@@ -105,6 +105,7 @@ const Contact = () => {
               name="name"
               value={contactInfo.name}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Name"
               className="contact__container__form__item__input"
             />
@@ -113,6 +114,7 @@ const Contact = () => {
               name="mail"
               value={contactInfo.mail}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Mail"
               className="contact__container__form__item__input"
             />
@@ -121,6 +123,7 @@ const Contact = () => {
               name="subject"
               value={contactInfo.subject}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Subject"
               className="contact__container__form__item__input"
             />
@@ -129,6 +132,7 @@ const Contact = () => {
               name="message"
               value={contactInfo.message}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Message"
               className="contact__container__form__item__input"
             />
