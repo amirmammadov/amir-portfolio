@@ -4,6 +4,7 @@ import Image from "next/image";
 import "@/sass/layout/_hero.scss";
 import "@/sass/layout/_education.scss";
 import "@/sass/layout/_popular.scss";
+import "@/sass/layout/_skills.scss";
 
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SkillsSlider from "@/components/SkillsSlider/SkillsSlider";
@@ -32,7 +33,7 @@ const Home = () => {
           <h2 className="hero__text__name">Amir Mammadov</h2>
           <h2 className="hero__text__job">web developer</h2>
           <p className="hero__text__desc">
-            I code web experiences that inspire, innovate, and captivate users
+            {"I've"} explored web dev for 3 years, excelling in MERN & Next.js.
           </p>
           <div className="hero__text__contact">
             <Link href="/contact" className="hero__text__contact__btn">
