@@ -24,7 +24,7 @@ export const projects = [
     image: "project/proj-quiz.png",
     techs: "React,ExpressJs and MongoDB",
     category: "fullstack",
-    popular: true,
+    popular: false,
   },
   {
     id: 4,
@@ -70,5 +70,14 @@ export const projects = [
     techs: "React,Tailwind,Mongoose",
     category: "fullstack",
     popular: false,
+  },
+  {
+    id: 9,
+    name: "MOTO4",
+    link: "https://moto4.vercel.app",
+    image: "project/moto4.png",
+    techs: "React,Redux,SASS",
+    category: "react",
+    popular: true,
   },
 ];
