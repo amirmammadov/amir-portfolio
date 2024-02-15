@@ -1,6 +1,4 @@
-@import "@/sass/utils/_colors.scss";
-@import "@/sass/utils/_mixins.scss";
-@import "@/sass/utils/_variables.scss";
+@import "../style.scss";
 
 .nav {
   @include flexbox($justify: space-between, $items: center);

@@ -9,7 +9,7 @@ import SectionTitle from "@/components/SectionTitle/SectionTitle";
 
 import { locationOfCity } from "@/constant/location";
 
-import Image from "next/image";
+import ContactInfo from "@/components/ContactInfo/ContactInfo";
 
 export interface StateValues {
   name: string;
@@ -22,7 +22,7 @@ const initialValues = { name: "", mail: "", subject: "", message: "" };
 
 const Contact = () => {
   const [contactInfo, setContactInfo] = useState<StateValues>(initialValues);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [serverError, setServerError] = useState("");
@@ -35,7 +35,7 @@ const Contact = () => {
     }
     if (error) {
       setTimeout(() => {
-        setError(false);
+        setError("");
       }, 2000);
     }
     if (serverError !== "") {
@@ -61,7 +61,12 @@ const Contact = () => {
     const { name, mail, subject, message } = contactInfo;
 
     if (!name || !mail || !subject || !message) {
-      setError(true);
+      setError("Fill all the fields!");
+      return;
+    }
+
+    if (!mail.includes("@")) {
+      setError("Provide valid email!");
       return;
     }
 
@@ -89,44 +94,7 @@ const Contact = () => {
         ></iframe>
       </div>
       <div className="contact__container">
-        <div className="contact__container__info">
-          <div className="contact__container__info__item">
-            <Image
-              src="/assets/icon/location-icon3.png"
-              alt="location"
-              width={30}
-              height={40}
-              className="contact__container__info__item__img"
-            />
-            <p className="contact__container__info__item__text">
-              Baku,Azerbaijan
-            </p>
-          </div>
-          <div className="contact__container__info__item">
-            <Image
-              src="/assets/icon/phone-icon.png"
-              alt="phone"
-              width={30}
-              height={40}
-              className="contact__container__info__item__img"
-            />
-            <p className="contact__container__info__item__text">
-              Phone: +994508708035
-            </p>
-          </div>
-          <div className="contact__container__info__item">
-            <Image
-              src="/assets/icon/mail-icon.jpg"
-              alt="mail"
-              width={30}
-              height={40}
-              className="contact__container__info__item__img"
-            />
-            <p className="contact__container__info__item__text">
-              Mail: amirmammado@gmail.com
-            </p>
-          </div>
-        </div>
+        <ContactInfo />
         <form className="contact__container__form">
           <div className="contact__container__form__title">
             Let us get in touch. Send me a message:
@@ -137,6 +105,7 @@ const Contact = () => {
               name="name"
               value={contactInfo.name}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Name"
               className="contact__container__form__item__input"
             />
@@ -145,6 +114,7 @@ const Contact = () => {
               name="mail"
               value={contactInfo.mail}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Mail"
               className="contact__container__form__item__input"
             />
@@ -153,6 +123,7 @@ const Contact = () => {
               name="subject"
               value={contactInfo.subject}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Subject"
               className="contact__container__form__item__input"
             />
@@ -161,6 +132,7 @@ const Contact = () => {
               name="message"
               value={contactInfo.message}
               onChange={handleChange}
+              autoComplete="off"
               placeholder="Message"
               className="contact__container__form__item__input"
             />
@@ -178,14 +150,12 @@ const Contact = () => {
       </div>
       {success && (
         <div className="pop-up pop-up__success">
-          <h2 className="pop-up__text__success">
-            Message was successfully sent!
-          </h2>
+          <h2 className="pop-up__text__success">Message sent!</h2>
         </div>
       )}
-      {error && (
+      {error !== "" && (
         <div className="pop-up pop-up__error">
-          <h2 className="pop-up__text__error">Please, fill all the fields!</h2>
+          <h2 className="pop-up__text__error">{error}</h2>
         </div>
       )}
       {serverError !== "" && (

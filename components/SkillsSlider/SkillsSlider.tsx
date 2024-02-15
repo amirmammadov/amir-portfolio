@@ -10,7 +10,7 @@ import "swiper/scss/autoplay";
 
 import { skills } from "@/data/skillsData";
 
-import "@/sass/layout/_skills.scss";
+// import "@/sass/layout/_skills.scss";
 
 const sliderImgSize = 140;
 

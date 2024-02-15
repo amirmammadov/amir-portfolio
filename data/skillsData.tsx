@@ -5,7 +5,7 @@ export const skills = [
   },
   {
     id: 2,
-    image: "skill/react.png",
+    image: "skill/react.svg",
   },
   {
     id: 3,
@@ -42,5 +42,13 @@ export const skills = [
   {
     id: 11,
     image: "skill/git.png",
+  },
+  {
+    id: 12,
+    image: "skill/jest.png",
+  },
+  {
+    id: 13,
+    image: "skill/zustand1.png",
   },
 ];

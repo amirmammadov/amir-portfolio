@@ -1,6 +1,4 @@
-@import "@/sass/utils/_colors.scss";
-@import "@/sass/utils/_mixins.scss";
-@import "@/sass/utils/_variables.scss";
+@import "../style.scss";
 
 .hero {
   width: 100vw;
@@ -38,6 +36,8 @@
       text-transform: capitalize;
       font-size: 1em;
       opacity: 0.8;
+      max-width: 500px;
+      line-height: 1.3;
     }
 
     &__contact {
@@ -78,7 +78,7 @@
     @include flexbox($justify: center, $items: center);
     width: 45%;
     height: 30em;
-    background: url("../../public/assets/me2.jpg") center center no-repeat;
+    background: url("/assets/me2.jpg") center center no-repeat;
     background-size: cover;
     border-radius: 1em;
     box-shadow: $box-shadow;

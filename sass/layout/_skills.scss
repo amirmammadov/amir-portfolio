@@ -1,7 +1,4 @@
-@import "@/sass/utils/_colors.scss";
-@import "@/sass/utils/_mixins.scss";
-@import "@/sass/utils/_variables.scss";
-@import "@/sass/utils/_mixins.scss";
+@import "../style.scss";
 
 .skills {
   width: 100vw;
@@ -9,7 +6,7 @@
   background-color: $dark;
 
   &__content {
-    padding: 5em 0;
+    padding: 5em 0 !important;
 
     &___item__img {
       @include flexbox($justify: center, $items: center);

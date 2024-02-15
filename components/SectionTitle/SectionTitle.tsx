@@ -1,4 +1,4 @@
-import "@/sass/components/SectionTitle.scss";
+import "@/sass/components/_sectionTitle.scss";
 
 interface ISectionTitle {
   text: string;
