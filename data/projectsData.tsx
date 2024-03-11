@@ -56,7 +56,7 @@ export const projects = [
   {
     id: 7,
     name: "Booking Panel",
-    link: "mammadov-booking.netlify.app",
+    link: "https://mammadov-booking.netlify.app",
     image: "project/proj-booking.png",
     techs: "HTML,SASS and JS",
     category: "basic",
