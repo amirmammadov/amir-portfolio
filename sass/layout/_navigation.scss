@@ -42,6 +42,10 @@
     outline: none;
   }
 
+  &__item:last-child {
+    padding-right: 0;
+  }
+
   &__link {
     text-decoration: none;
     color: $white;
