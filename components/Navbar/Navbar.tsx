@@ -53,7 +53,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="nav__item">
+        <div className="nav__item" style={{ paddingRight: 0 }}>
           <Link href="/contact" className="nav__link">
             Contact
           </Link>
