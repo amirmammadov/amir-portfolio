@@ -20,6 +20,10 @@
       display: block;
       color: $white;
       @include flexbox($justify: center, $items: center);
+      background: -webkit-linear-gradient(40deg, $blue, $white2);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
