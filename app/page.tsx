@@ -72,6 +72,15 @@ const Home = () => {
               JS
             </Link>
           </div>
+          <div className="hero__image__overlay">
+            <div className="hero__image__overlay__title">About me</div>
+            <p className="hero__image__overlay__text">
+              For me, the primary goal is to create projects that are
+              well-structured in terms of performance and security, which can be
+              comfortably operated by potential users. Therefore, I constantly
+              conduct research in this direction.
+            </p>
+          </div>
         </div>
       </section>
       <section className="experience">
