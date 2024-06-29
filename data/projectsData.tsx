@@ -83,10 +83,19 @@ export const projects = [
   {
     id: 10,
     name: "MOTO4",
-    link: "https://moto4.vercel.app",
+    link: "https://moto4.az",
     image: "project/moto4.png",
     techs: "React,Redux,SASS",
     category: "react",
     popular: true,
+  },
+  {
+    id: 11,
+    name: "Wild Places",
+    link: "https://wild-places.vercel.app",
+    image: "project/wild-places.png",
+    techs: "Next.Js,Supabase, Tailwind",
+    category: "fullstack",
+    popular: false,
   },
 ];
