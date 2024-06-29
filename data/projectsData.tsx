@@ -94,7 +94,7 @@ export const projects = [
     name: "Wild Places",
     link: "https://wild-places.vercel.app",
     image: "project/wild-places.png",
-    techs: "Next.Js,Supabase, Tailwind",
+    techs: "Next.Js,Supabase,Tailwind",
     category: "fullstack",
     popular: false,
   },
