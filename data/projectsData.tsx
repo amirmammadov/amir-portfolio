@@ -1,6 +1,15 @@
 export const projects = [
   {
     id: 1,
+    name: "EasyHire",
+    link: "https://easyhire.az/",
+    image: "project/easyhire.png",
+    techs: "React, RTK Query, Material UI",
+    category: "fullstack",
+    popular: true,
+  },
+  {
+    id: 2,
     name: "Payrole",
     link: "https://mypayrole.vercel.app",
     image: "project/payrole.png",
@@ -9,7 +18,7 @@ export const projects = [
     popular: true,
   },
   {
-    id: 2,
+    id: 3,
     name: "Bookworm",
     link: "https://pageturner-app.netlify.app/books",
     image: "project/proj-books.png",
@@ -18,7 +27,7 @@ export const projects = [
     popular: false,
   },
   {
-    id: 3,
+    id: 4,
     name: "Cars",
     link: "https://mammadov-cars.netlify.app/",
     image: "project/proj-car.png",
@@ -27,16 +36,16 @@ export const projects = [
     popular: false,
   },
   {
-    id: 4,
+    id: 5,
     name: "Brainy App",
     link: "https://mern-quiz-app-amirmammadov.vercel.app",
     image: "project/proj-quiz.png",
     techs: "React,ExpressJs and MongoDB",
     category: "fullstack",
-    popular: true,
+    popular: false,
   },
   {
-    id: 5,
+    id: 6,
     name: "Mexant",
     link: "https://mexant-app.netlify.app",
     image: "project/proj-mexant.png",
@@ -45,7 +54,7 @@ export const projects = [
     popular: false,
   },
   {
-    id: 6,
+    id: 7,
     name: "Dashboard",
     link: "https://admin-dashboard-topaz-six.vercel.app",
     image: "project/proj-dashboard.png",
@@ -54,7 +63,7 @@ export const projects = [
     popular: false,
   },
   {
-    id: 7,
+    id: 8,
     name: "Booking Panel",
     link: "https://mammadov-booking.netlify.app",
     image: "project/proj-booking.png",
@@ -63,7 +72,7 @@ export const projects = [
     popular: false,
   },
   {
-    id: 8,
+    id: 9,
     name: "Social Media",
     link: "https://threads-amirmammadov.vercel.app",
     image: "project/threads-full.png",
@@ -72,7 +81,7 @@ export const projects = [
     popular: false,
   },
   {
-    id: 9,
+    id: 10,
     name: "Dall-E",
     link: "https://dall-e-amirmammadov.vercel.app",
     image: "project/proj-dalle.png",
@@ -81,7 +90,7 @@ export const projects = [
     popular: false,
   },
   {
-    id: 10,
+    id: 11,
     name: "MOTO4",
     link: "https://moto4.az",
     image: "project/moto4.png",
@@ -90,7 +99,7 @@ export const projects = [
     popular: true,
   },
   {
-    id: 11,
+    id: 12,
     name: "Wild Places",
     link: "https://wild-places.vercel.app",
     image: "project/wild-places.png",
